@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo: Earth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <p>What if Earth had rings?</p>
+  <h1>HALO: EARTH</h1>
+</header>
+
+<div id="controls">
+  <div class="ctrl">
+    <label for="city">City</label>
+    <select id="city">
+      <option>London</option>
+      <option>Kathmandu</option>
+      <option>Tokyo</option>
+      <option>New York</option>
+      <option>Sydney</option>
+    </select>
+  </div>
+
+  <div class="ctrl">
+    <label for="time">Time of Day</label>
+    <div class="time-row">
+      <input type="range" id="time" min="0" max="23.98" step="0.05" value="12" />
+      <span id="timeLabel">12:00</span>
+    </div>
+    <div class="auto-row">
+      <input type="checkbox" id="autoPlay" />
+      <label for="autoPlay">Auto-play</label>
+    </div>
+  </div>
+
+  <div class="ctrl">
+    <label for="thickness">Ring Thickness</label>
+    <select id="thickness">
+      <option value="thin">Thin</option>
+      <option value="medium">Medium</option>
+      <option value="saturn" selected>Saturn-like</option>
+      <option value="extreme">Extreme</option>
+    </select>
+  </div>
+
+  <button id="standBtn">🌍 Stand Outside</button>
+</div>
+
+<canvas id="sky"></canvas>
+
+<script src="cities.js"></script>
+<script src="sky.js"></script>
+<script src="stars.js"></script>
+<script src="rings.js"></script>
+<script src="clouds.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
