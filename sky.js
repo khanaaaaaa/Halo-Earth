@@ -130,12 +130,6 @@ function drawShootingStars(ctx, w, h, hour) {
     ctx.strokeStyle = g;
     ctx.lineWidth = s.width * s.life;
     ctx.stroke();
-    // Bright head
-    const hg = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, 3);
-    hg.addColorStop(0, `rgba(255,255,255,${s.life * night})`);
-    hg.addColorStop(1, "rgba(255,255,255,0)");
-    ctx.fillStyle = hg;
-    ctx.fillRect(s.x - 3, s.y - 3, 6, 6);
   }
 }
 

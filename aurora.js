@@ -1,5 +1,5 @@
 // Aurora borealis — visible at high latitudes at night
-const AURORA_BANDS = Array.from({ length: 5 }, (_, i) => ({
+const AURORA_BANDS = Array.from({ length: 3 }, (_, i) => ({
   offset:  i * 0.18,
   speed:   0.00008 + Math.random() * 0.00006,
   phase:   Math.random() * Math.PI * 2,
