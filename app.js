@@ -62,77 +62,77 @@ document.body.appendChild(crosshair);
 const SKY_OBJECTS = {
   sun: {
     title: "The Sun",
-    body:  "Our star, 150 million km away. At this angle it illuminates Earth's ring system, casting dramatic shadows across the ring plane and scattering golden light through the ice particles.",
+    body:  "Distance: 149.6 million km. Angular diameter: 0.53°. At low elevation (golden hour), sunlight travels through ~38× more atmosphere, scattering blue wavelengths and leaving red/orange. This forward-scatters through ring ice particles, turning them gold. Solar irradiance at Earth's surface: ~1,000 W/m².",
     icon:  "☀️",
   },
   moon: {
     title: "The Moon",
-    body:  "Earth's natural satellite, 384,400 km away. The rings would cast a faint shadow across the lunar surface during certain alignments, creating a spectacular eclipse-like effect.",
+    body:  "Distance: 384,400 km. Angular diameter: 0.52° — nearly identical to the Sun. With Earth's rings present, the Moon would pass through the ring plane twice per orbit (~27.3 days), causing mutual eclipses. Ring shadows on the Moon would be visible to the naked eye.",
     icon:  "🌙",
   },
   rings: {
-    title: "Earth's Ring System",
-    body:  "A hypothetical ring system similar to Saturn's. Composed of ice particles and rocky debris, it would span from 7,000 km to 80,000 km above Earth's surface. The Cassini Division — the dark gap — is caused by orbital resonance.",
+    title: "Earth's Hypothetical Ring System",
+    body:  "Based on research by Scharf (2013) and Zuluaga et al. (2015): if Earth had Saturn-like rings, the inner edge would sit at the Roche limit for ice (~9,500 km altitude, ~2.44× Earth's radius). The rings would be coplanar with the equator. They would NOT rotate with Earth — they orbit at Keplerian velocities (inner edge ~5.6 km/s). The rings would be visible from all latitudes except the poles.",
     icon:  "🪐",
   },
   ringB: {
     title: "B Ring — Brightest Band",
-    body:  "The densest and most opaque ring band. Composed of water ice particles ranging from centimetres to metres in size. This is the most visible part of the ring system from Earth's surface.",
+    body:  "Saturn's B ring is 25,500 km wide with optical depth τ = 0.4–2.5. Composed of 90–95% water ice particles (1 cm to 10 m diameter). Cassini VIMS spectroscopy shows cream-white colour (albedo ~0.6). The B ring is so dense it is essentially opaque — sunlight cannot pass through it. On a ringed Earth, this band would appear as a bright white stripe across the sky.",
     icon:  "💫",
   },
   ringCassini: {
     title: "Cassini Division",
-    body:  "A 4,800 km wide gap between the B and A rings. Caused by a 2:1 orbital resonance with the Moon — particles here are repeatedly pulled out of orbit, clearing the gap over millions of years.",
+    body:  "A 4,800 km wide gap at 117,580 km from Saturn's centre. Caused by a 2:1 mean-motion resonance with Mimas — particles here complete exactly 2 orbits for every 1 orbit of Mimas, receiving repeated gravitational kicks that clear the region. Optical depth τ ≈ 0.05–0.15. Appears as a dark gap in the ring arc.",
     icon:  "🔭",
   },
   milkyway: {
-    title: "The Milky Way",
-    body:  "Our home galaxy, containing 200–400 billion stars. The glowing band across the sky is the galactic plane seen edge-on. Earth's rings would be visible against this backdrop on clear nights.",
+    title: "The Milky Way Galaxy",
+    body:  "Our barred spiral galaxy: diameter ~100,000 light-years, containing 200–400 billion stars. The band visible here is the galactic plane seen edge-on from our position ~26,000 light-years from the centre. The dark rifts are dust lanes blocking starlight. On a ringed Earth, the rings would cross the Milky Way band, creating a spectacular intersection in the night sky.",
     icon:  "🌌",
   },
   aurora: {
     title: "Aurora Borealis",
-    body:  "Charged particles from the solar wind collide with atmospheric gases at the poles, creating curtains of green and teal light. Earth's rings would cast faint shadows through the aurora at high latitudes.",
+    body:  "Caused by solar wind electrons (0.1–10 keV) colliding with O and N₂ at 100–300 km altitude. Green (557.7 nm): oxygen at 100–150 km. Red (630 nm): oxygen above 200 km. Blue/purple: nitrogen. Occurs within the auroral oval at ~65–72° geomagnetic latitude. Earth's rings would cast faint shadow bands through the aurora curtains.",
     icon:  "🌠",
   },
   stars: {
     title: "Stars",
-    body:  "Distant suns, light-years away. Their colours reveal their temperature: blue-white stars are the hottest (30,000K), yellow stars like our Sun are mid-range (5,800K), and red dwarfs are the coolest (3,000K).",
+    body:  "Stellar classification by surface temperature (Harvard system): O/B blue-white >10,000K, A white 7,500–10,000K, F yellow-white 6,000–7,500K, G yellow 5,200–6,000K (our Sun is G2V at 5,778K), K orange 3,700–5,200K, M red <3,700K. Twinkle (scintillation) is caused by atmospheric turbulence bending starlight — planets don't twinkle because they have measurable angular diameter.",
     icon:  "⭐",
   },
   sky_day: {
-    title: "Daytime Sky",
-    body:  "Blue light from the Sun scatters more than red light through the atmosphere (Rayleigh scattering), making the sky appear blue. Earth's rings would be visible as a bright arc even during the day.",
+    title: "Daytime Sky — Rayleigh Scattering",
+    body:  "Scattering intensity ∝ λ⁻⁴ (Rayleigh's law). Blue light (450 nm) scatters ~5.5× more than red (700 nm), making the sky blue. The sky would appear slightly brighter overall on a ringed Earth — rings reflect ~60% of sunlight back, adding ~10–15% to daytime illumination. Ring shadows would create subtle parallel dark bands across the sky.",
     icon:  "🌤️",
   },
   sky_dawn: {
-    title: "Dawn Sky",
-    body:  "As the Sun rises, light travels through more atmosphere, scattering away blue light and leaving warm reds and oranges. The rings would glow gold and amber at this angle, lit from below.",
+    title: "Civil Twilight / Sunrise",
+    body:  "Civil twilight: Sun 0° to −6° below horizon. Nautical twilight: −6° to −12°. Astronomical twilight: −12° to −18°. At sunrise, the optical path through the atmosphere is ~38× longer than at zenith, scattering all blue light and leaving red/orange. The rings would glow amber-gold as sunlight grazes their underside — a phenomenon called 'ring opposition surge'.",
     icon:  "🌅",
   },
   sky_dusk: {
-    title: "Dusk Sky",
-    body:  "The same scattering effect as dawn but in reverse. The rings would cast long shadows across the sky and glow with deep orange and crimson as the Sun dips below the horizon.",
+    title: "Sunset / Evening Twilight",
+    body:  "The Belt of Venus (pink band above the blue Earth shadow) is visible just after sunset — it's the shadow of Earth cast on the atmosphere. On a ringed Earth, the ring shadow would add a dramatic dark band across the sky during equinoxes, when the Sun is in the ring plane. At solstices, one face of the rings is fully illuminated.",
     icon:  "🌇",
   },
   sky_night: {
-    title: "Night Sky",
-    body:  "Without the Sun's glare, the full ring system becomes visible — a ghostly silver arc stretching from horizon to horizon, faintly lit by moonlight and starlight.",
+    title: "Night Sky — Ring-Lit Darkness",
+    body:  "Research by Zuluaga et al. (2015) found that Earth's rings would make nights significantly brighter — the rings would reflect sunlight onto the night side, reducing darkness by the equivalent of a half-moon. This would have profound effects on circadian rhythms, animal behaviour, and astronomy. The rings would be the brightest object in the night sky after the Moon.",
     icon:  "🌃",
   },
   ground: {
     title: "Earth's Surface",
-    body:  "Standing on the ground, you would see the rings as a permanent feature of the sky — never setting, never rising, always at the same angle determined by your latitude. Near the equator they arch directly overhead.",
+    body:  "The ring arc is a permanent, fixed feature of the sky — it never rises or sets. Its position is determined solely by your latitude. The arc always points toward the celestial equator. At the equator, it passes through the zenith. The rings orbit at 9,500–19,000 km altitude, completing one orbit in 3–6 hours — fast enough that individual particles would be visible moving if you watched carefully.",
     icon:  "🌍",
   },
   clouds: {
     title: "Clouds",
-    body:  "Water vapour condensed into droplets or ice crystals. Clouds would occasionally obscure the rings, and the rings would cast faint shadow bands across cloud tops — a phenomenon unique to a ringed Earth.",
+    body:  "Tropospheric clouds form at 2–12 km altitude — far below the ring system at 9,500+ km. Clouds would periodically obscure the rings. Crucially, the rings would cast shadow bands on cloud tops during certain sun angles, creating striped illumination patterns visible from aircraft. High-altitude cirrus clouds (ice crystals at 8–12 km) would create halos around the ring arc.",
     icon:  "☁️",
   },
   horizon: {
-    title: "Horizon",
-    body:  "The line where Earth's surface meets the sky, about 5 km away at eye level. The rings converge toward the horizon at both ends of their arc, vanishing into atmospheric haze.",
+    title: "Horizon & Ring Convergence",
+    body:  "The geometric horizon is ~5 km away at eye level (h=1.7m). The ring arc converges to two points on the horizon — due east and due west — regardless of latitude. This is because the ring plane intersects the horizon at the equatorial azimuth points. The rings appear to 'rise' from these two horizon points and arch overhead (or at an angle depending on latitude).",
     icon:  "📍",
   },
 };
@@ -289,28 +289,30 @@ function loop() {
   const w   = canvas.width;
   const h   = canvas.height;
 
-  // Smooth camera pan
-  state.yaw   += (state.targetYaw   - state.yaw)   * 0.10;
-  state.pitch += (state.targetPitch - state.pitch)  * 0.10;
+  // Smooth camera pan — clamp yaw to ±1.2 (no full 360, just look left/right)
+  state.targetYaw   = Math.max(-1.2, Math.min(1.2, state.targetYaw));
+  state.yaw        += (state.targetYaw   - state.yaw)   * 0.10;
+  state.pitch      += (state.targetPitch - state.pitch)  * 0.10;
 
   // Clear hit regions each frame
   state.hitRegions = [];
 
-  // Apply camera pan as canvas transform
-  ctx.save();
-  ctx.translate(w / 2, h / 2);
-  // Horizontal pan shifts the scene left/right
-  ctx.translate(-state.yaw * w * 0.18, state.pitch * h * 0.12);
-  ctx.translate(-w / 2, -h / 2);
+  // Pass pan offset to rings via global (avoids canvas transform overhead)
+  window._ringPanX = -state.yaw * w * 0.22;
+  window._ringPanY =  state.pitch * h * 0.10;
 
+  // Draw everything without canvas transform — pan is baked into ring projection
+  // Sky/stars/ground shift slightly via CSS-like offset on ctx
+  ctx.save();
+  ctx.translate(window._ringPanX * 0.35, window._ringPanY * 0.35); // subtle parallax
   drawSky(ctx, w, h, hour, frame);
   drawStars(ctx, w, h, hour, frame);
   drawAurora(ctx, w, h, hour, lat);
-  drawGround(w, h, hour, season);
-  drawRings(ctx, w, h, hour, lat, thickness, drift, ringOpacity, season);
-  drawClouds(ctx, w, h, hour);
-
   ctx.restore();
+
+  drawGround(w, h, hour, season);
+  drawRings(ctx, w, h, hour, lat, thickness, 0, ringOpacity, season);
+  drawClouds(ctx, w, h, hour);
 
   // Register sky-wide hit zones (outside transform — screen space)
   const sun    = getSunIntensity(hour);
@@ -363,8 +365,9 @@ function loop() {
   drawCompass(w, h);
 
   // Info bar
-  const tiltDeg = tiltOverride >= 0 ? tiltOverride : Math.round(90 - Math.abs(CITIES[city].lat));
-  ringInfo.textContent = `${city}  ·  ${formatTime(hour)}  ·  ${phase}  ·  Ring angle ${tiltDeg}°  ·  Drag to look around  ·  R to reset`;
+  const tiltDeg  = tiltOverride >= 0 ? tiltOverride : Math.round(getRingElevationDeg(CITIES[city].lat));
+  const cityDesc  = CITIES[city].desc;
+  ringInfo.textContent = `${city}  ·  ${formatTime(hour)}  ·  ${phase}  ·  ${cityDesc}  ·  Drag to look  ·  R to reset`;
 
   state.drift += 0.000016;
   state.frame++;
